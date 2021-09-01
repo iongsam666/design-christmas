@@ -43,3 +43,386 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.l-main {
+  /* overflow: hidden; */
+}
+
+.bd-container {
+  max-width: 969px;
+  width: calc(100% - 3rem);
+  margin: 0 var(--mb-3);
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+}
+
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    width: 90%;
+    margin: 0 autop;
+    padding: 2.5rem 0 0;
+    background-color: var(--body-color);
+    transition: 0.4s;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: var(--z-fixed);
+    border-radius: 2rem;
+  }
+}
+
+.nav__item {
+  margin-bottom: var(--mb-2);
+}
+
+.nav__logo,
+.nav__toggle,
+.nav__link {
+  color: var(--text-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__link:hover,
+.nav__logo:hover {
+  color: var(--first-color);
+}
+
+.nav__link {
+  transition: 0.4s;
+}
+
+.nav__icon {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  top: calc(var(--header-height) + 1rem);
+}
+
+.active-link {
+  position: relative;
+}
+.active-link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  height: 5px;
+  width: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: rgba(218, 37, 53, 0.5);
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  visibility: hidden;
+}
+
+.scrolltop:hover {
+  background-color: var(--first-color);
+}
+
+.scrolltop__icon {
+  font-size: 1.5rem;
+  color: var(--bo);
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
+/* Home */
+.home__container {
+  row-gap: 1.5rem;
+}
+
+.home__img {
+  width: 280px;
+  justify-self: center;
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-2);
+}
+
+.home__description {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.button {
+  background-color: var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/* Share */
+
+.share__container {
+  text-align: center;
+}
+
+.share__data {
+  text-align: center;
+}
+
+.share__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-3);
+}
+
+.share__description {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.share__img {
+  width: 280px;
+  justify-self: center;
+}
+
+/* Decoration */
+.decoration__container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.decoration__data {
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+}
+
+.decoration__data:hover {
+  box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
+}
+
+.decoration__title {
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.button-link {
+  background-color: transparent;
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 1px;
+}
+
+.decoration__img {
+  width: 180px;
+}
+
+/* Accessory */
+.accessory__container {
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 2rem;
+}
+
+.accessory__content {
+  background-color: var(--container-color);
+  border-radius: 0.4rem;
+  display: grid;
+  padding: 0.25rem 0.75rem 0.75rem;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+}
+
+.accessory__content:hover {
+  box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
+}
+
+.accessory__img {
+  width: 110px;
+  justify-self: center;
+  margin-bottom: 0.25rem;
+}
+
+.accessory__title,
+.accessory__category {
+  text-align: center;
+}
+
+.accessory__title {
+  font-size: var(--normal-font-size);
+}
+
+.accessory__category {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.accessory__price {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.accessory__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 1rem 0 1rem 0;
+}
+
+/* SEND GIFT */
+.send {
+  background-color: var(--first-color-send);
+}
+
+.send__title,
+.send__description {
+  color: #fff !important;
+}
+
+.send__description {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.send__direction {
+  display: flex;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.send__input {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.send__input::placeholder {
+  font-size: 1.1rem;
+  color: var(--first-color);
+  letter-spacing: 1px;
+}
+
+.send__img {
+  width: 280px;
+  justify-self: center;
+}
+
+/* FOOTER */
+.footer__container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer__logo {
+  color: var(--title-color);
+}
+
+.footer__title {
+  margin-bottom: var(--mb-2);
+}
+
+.footer__description {
+  font-size: 1rem;
+}
+
+.footer__content ul li {
+  margin-bottom: var(--mb-1);
+}
+
+.footer__link {
+  padding: 0 0.4rem !important;
+  font-size: 1rem;
+  display: inline-block;
+  color: var(--text-color);
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+}
+
+.footer__social {
+  padding: 0.2rem;
+  margin-right: var(--mb-2);
+}
+
+.footer__social i {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.footer__footer {
+  text-align: center;
+  margin-top: var(--mb-6);
+  font-size: var(--small-font-size);
+}
+
+.footer__social:hover i {
+  color: var(--first-color);
+}
+
+.footer__link:hover {
+  color: var(--first-color);
+}
+
+/* Chang theme */
+.change-theme {
+  position: absolute;
+  right: 1.5rem;
+  top: 2.5rem;
+  font-size: 1.4rem;
+  display: flex;
+}
+
+.change-theme:hover {
+  color: var(--first-color);
+}
